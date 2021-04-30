@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "element-plus": "^1.0.2-beta.41",
     "js-md5": "^0.7.3",
     "vue": "^3.0.5",
     "vue-router": "^3.5.1",
@@ -16,6 +17,8 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.2",
     "@vue/compiler-sfc": "^3.0.5",
+    "less": "^4.1.1",
+    "less-loader": "^8.1.1",
     "vite": "^2.2.3"
   }
 }

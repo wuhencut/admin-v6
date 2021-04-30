@@ -1,0 +1,57 @@
+// button
+.el-button{
+  border-radius:0; 
+}
+
+
+/*input*/
+.el-input__inner{
+  border-radius:0; 
+  &:focus{
+    border-color: #c0c4cc;
+  }
+}
+
+.el-textarea__inner{
+  border-radius:0; 
+  &:focus{
+    border-color: #c0c4cc;
+  }
+}
+
+.el-select .el-input.is-focus .el-input__inner{
+  border-color: #c0c4cc;
+}
+
+
+.el-dropdown-menu{
+  border-radius:0;
+}
+
+.el-select-dropdown{
+  border-radius:0;
+}
+
+
+// table
+.el-table{
+  border: 1px solid #dcdfe6;
+  border-bottom:0; 
+}
+.el-table th{
+  background: #fafafa;
+  color: #414141;
+}
+
+.el-table__body tr:hover>td{
+  background-color:#f5f7fa;
+}
+
+.el-table--striped .el-table__body tr.el-table__row--striped.current-row td, .el-table__body tr.current-row>td, .el-table__body tr.hover-row.current-row>td, .el-table__body tr.hover-row.el-table__row--striped.current-row>td, .el-table__body tr.hover-row.el-table__row--striped>td, .el-table__body tr.hover-row>td{
+  background-color:#f5f7fa;
+}
+
+
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li{
+  border-radius:0; 
+}
