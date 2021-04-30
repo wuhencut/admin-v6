@@ -32,19 +32,20 @@
         </el-form-item>
       </el-form>
     </el-main>
-    <el-footer>© 2019 映兔科技</el-footer>
+    <el-footer>© 2021 映兔科技</el-footer>
   </el-container>
 </template>
 <script>
 import md5 from "js-md5";
 import env from "../api/env";
+import router from "../router/index.js"
 
 export default {
   data() {
     return {
       user: {
-        email: "",
-        password: ""
+        email: "wangjialun@ingtube.com",
+        password: "12345678"
       },
       defaultRoute: "cpList", //设置默认登录后展示的页面
       authObj: {} //权限对象， 因为后台传过来的是字符串
@@ -98,7 +99,7 @@ export default {
         //存登录信息
         localStorage.setItem("userInfo", JSON.stringify(userInfo));
         sessionStorage.setItem("auth", 1); //登录状态 1
-        this.$router.push({
+        router.push({
           path: "/",
           name: "main"
         });

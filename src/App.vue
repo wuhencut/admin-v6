@@ -1,12 +1,13 @@
 <template>
-  <Login></Login>
+  <router-view></router-view>
+  <ChangeEnv></ChangeEnv>
 </template>
 
 <script>
-import Login from "./views/Login.vue"
+import ChangeEnv from "./components/changeEnv/ChangeEnv.vue"
 export default {
   components: {
-    Login
+    ChangeEnv
   }
 }
 

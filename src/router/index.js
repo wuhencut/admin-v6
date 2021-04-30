@@ -1,4 +1,5 @@
 import Router from "vue-router"
+import api from "../api/index.js"
 
 let router = new Router({
   routes: [
@@ -17,9 +18,11 @@ let router = new Router({
       component: () => import("../views/Main.vue"),
       //验证登录
       async beforeEnter(to, from, next) {
+        alert(1)
         if (sessionStorage.getItem("auth") == 1) {
           next();
         } else {
+          alert(2)
           let res = await api.verify({});
           if (res.data.valid == 1) {
             sessionStorage.setItem("auth", 1);
@@ -446,12 +449,14 @@ let router = new Router({
 
 //拦截路由，判断有没有auth，没有就再次verify
 router.beforeEach(async (to, from, next) => {
+  console.log(to.path, from.path)
   if (to.name != "login" && sessionStorage.getItem("auth") != 1) {
     let res = await api.verify({});
     if (res.error_code == 0 && res.data.valid == 1) {
       sessionStorage.setItem("auth", 1);
       next();
     } else {
+      alert(3)
       next("login");
     }
   } else {

@@ -1,5 +1,5 @@
 import axios from "axios";
-import router from "../router";
+import router from "../router/index.js";
 import initReq from "../utils/initReq";
 import { PASSPORT, BASEURL } from "./baseUrl";
 import getUserInfo from "./getUserInfo";
